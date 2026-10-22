@@ -29,7 +29,7 @@ a:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
 .top .w{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
 .top b{font-family:"Big Shoulders Display",sans-serif;font-size:1.4rem;letter-spacing:.02em;text-transform:uppercase}
 .top a{font-weight:600;text-decoration:none;color:var(--ink)}
-.hero .w{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:44px;padding-top:54px;padding-bottom:58px}
+.hero .w{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:44px;padding-top:44px;padding-bottom:48px}
 .where{color:var(--brass);font-weight:600;margin:0 0 10px}
 h1{font-weight:900;font-size:clamp(3.4rem,10vw,7.6rem);line-height:.84;margin:0 0 26px;letter-spacing:.005em}
 h1 span{display:block;color:var(--green);margin-left:.5em}
@@ -39,14 +39,20 @@ h1 span{display:block;color:var(--green);margin-left:.5em}
 .btn.o{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn.o:hover{background:var(--ink);color:var(--bg)}
 .acts{display:flex;gap:12px;flex-wrap:wrap}
-.plate{background:var(--plate);border:2px solid var(--ink);padding:22px 22px 18px;align-self:end}
+.plate{background:var(--plate);border:2px solid var(--ink);padding:22px 22px 18px;align-self:start;margin-top:8px}
 .plate .n{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:4rem;line-height:.9}
 .plate p{margin:6px 0 0}
 .plate .stars{color:var(--brass);letter-spacing:2px}
-.rigs{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:46px 0}
-.rigs p{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:clamp(1.8rem,4.4vw,3.1rem);line-height:1.08;margin:0;text-transform:uppercase}
-.rigs p em{font-style:normal;color:var(--green)}
-.rigs .mono{margin:14px 0 0;color:var(--muted);font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:.85rem;text-transform:none}
+.rigs{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:40px 0 44px}
+.rigs h2{font-weight:500;font-size:.85rem;color:var(--muted);text-transform:none;letter-spacing:0;margin:0 0 14px}
+.rigs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;column-gap:.55em;row-gap:2px;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.12;text-transform:uppercase}
+.rigs li:not(:last-child)::after{content:" /";color:var(--brass)}
+.rigs li em{font-style:normal;color:var(--green)}
+.rigs .mono{margin:16px 0 0;color:var(--muted);font-weight:500;max-width:46em}
+.hrs{width:100%;border-collapse:collapse;margin:16px 0 0;font-size:.95rem}
+.hrs td{padding:7px 0;border-top:1px solid var(--line)}
+.hrs td+td{text-align:right;font-weight:600}
+.plate .src{color:var(--muted);font-size:.75rem;margin-top:8px}
 .how{padding:64px 0}
 .how .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:56px}
 h2{font-weight:900;font-size:clamp(2.2rem,5vw,3.4rem);line-height:.95;margin:0 0 14px}
@@ -94,14 +100,27 @@ footer{border-top:1px solid var(--line);padding:22px 26px 30px;max-width:1100px;
    <div class="n">4.8</div>
    <p><span class="stars" aria-hidden="true">★★★★★</span> 26 Google reviews</p>
    <p class="mono">Owned by Colin</p>
+   <table class="hrs" aria-label="Hours from the Google listing">
+    <tr><td>Mon &ndash; Fri</td><td>7 AM &ndash; 5 PM</td></tr>
+    <tr><td>Sat &ndash; Sun</td><td>Closed</td></tr>
+   </table>
+   <p class="mono src">Hours as listed on Google</p>
   </aside>
  </div>
 </section>
 
-<section class="rigs" aria-label="What we work on">
+<section class="rigs" aria-labelledby="rigs-h">
  <div class="w">
-  <p>Trucks. <em>Trailers.</em> Repair work for trucks and trailers.</p>
-  <p class="mono">Outlaw Truck &amp; Trailer Repair &middot; Elbert, Colorado</p>
+  <h2 id="rigs-h" class="mono">What the shop works on</h2>
+  <ul>
+   <li>Heavy-duty trucks &amp; trailers</li>
+   <li>Medium &amp; light-duty trucks</li>
+   <li>Autos</li>
+   <li>Farm equipment</li>
+   <li>RVs</li>
+   <li><em>Metal fabrication</em></li>
+  </ul>
+  <p class="mono">Preferred installer for etrailer. Services as listed on the shop&rsquo;s Facebook page and Google listing.</p>
  </div>
 </section>
 
@@ -130,6 +149,7 @@ footer{border-top:1px solid var(--line);padding:22px 26px 30px;max-width:1100px;
    <h2 id="find-h" class="big">The shop</h2>
    <address>26700 Co Rd 21<br>Elbert, CO 80106</address>
    <p><a href="tel:+17193678976">(719) 367-8976</a></p>
+   <p>Open Monday to Friday, 7 AM &ndash; 5 PM</p>
    <p style="margin-top:18px"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=26700%20Co%20Rd%2021%2C%20Elbert%2C%20CO%2080106" target="_blank" rel="noopener">Directions</a></p>
   </div>
   <iframe title="Map of 26700 Co Rd 21, Elbert, CO" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Outlaw%20Truck%20%26%20Trailer%2C%2026700%20Co%20Rd%2021%2C%20Elbert%2C%20CO%2080106&amp;z=13&amp;output=embed"></iframe>
