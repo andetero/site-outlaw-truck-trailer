@@ -80,9 +80,38 @@ footer{border-top:1px solid var(--line);padding:22px 26px 30px;max-width:1100px;
  .acts .btn{width:100%;text-align:center}
  .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;text-align:center;z-index:9;box-shadow:0 10px 28px var(--shadow)}
 }
+picture.ph{display:block}picture.ph img{display:block;width:100%;height:auto}
+.yard{position:relative;border-bottom:2px solid var(--ink)}
+.yard picture.ph img{height:clamp(240px,42vw,520px);object-fit:cover}
+.yard .tagp{position:absolute;left:26px;bottom:22px;margin:0;background:var(--bg);color:var(--ink);border:2px solid var(--ink);padding:8px 14px}
+.svc{padding:60px 0 64px;border-bottom:2px solid var(--ink)}
+.svc .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:52px}
+.svc .side{align-self:start}
+.svc .side picture{margin-top:26px;border:2px solid var(--ink)}
+.svc .side .mono{color:var(--muted);margin:14px 0 0}
+.svc dl{margin:0}
+.svc dl div{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.svc dl div:nth-child(4){margin-left:5%}
+.svc dt{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.55rem;line-height:1.05;text-transform:uppercase}
+.svc dt em{font-style:normal;color:var(--green)}
+.svc dd{margin:0;color:var(--muted)}
+.how h3{font-weight:500;font-size:.85rem;color:var(--muted);margin:0 0 6px}
+.abt{font-size:1.12rem;margin:0 0 14px;max-width:32em}
+.pair{padding:0 0 64px}
+.pair .w{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:26px;align-items:start}
+.pair picture{border:2px solid var(--ink)}
+.pair picture+picture{margin-top:70px}
+.find .area{color:var(--muted);margin:16px 0 0}
+.out{padding:48px 0}
+.out .btns{display:flex;gap:12px;flex-wrap:wrap}
+.out .btn.o2{background:transparent;color:var(--green-ink);border-color:var(--green-ink)}
+.out .btn.o2:hover{background:var(--green-ink);color:var(--green)}
+@media (max-width:820px){.svc .w,.pair .w{grid-template-columns:1fr;gap:26px}.svc dl div{grid-template-columns:1fr;gap:2px}.svc dl div:nth-child(4){margin-left:0}.pair picture+picture{margin-top:0}}
+@media (max-width:640px){.yard .tagp{left:14px;bottom:14px}.out .btns .btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
+<!-- Placeholder photos: royalty-free stock images (Unsplash License, details in CREDITS.md). They are not of this business. Replace them with the client's own real photos before handoff. -->
 <header class="top"><div class="w"><b>Outlaw Truck &amp; Trailer</b><a href="tel:+17193678976">(719) 367-8976</a></div></header>
 <main>
 <section class="hero" aria-labelledby="h">
@@ -109,39 +138,55 @@ footer{border-top:1px solid var(--line);padding:22px 26px 30px;max-width:1100px;
  </div>
 </section>
 
-<section class="rigs" aria-labelledby="rigs-h">
+<figure class="yard" style="margin:0">
+ <picture class="ph"><source type="image/webp" srcset="img/hero.webp"><img src="img/hero.jpg" width="1600" height="760" alt="A triple-axle flatbed trailer parked on a dirt lot" fetchpriority="high" decoding="async"></picture>
+ <p class="tagp mono">Elbert County, Colorado</p>
+</figure>
+
+<section class="svc" aria-labelledby="svc-h">
  <div class="w">
-  <h2 id="rigs-h" class="mono">What the shop works on</h2>
-  <ul>
-   <li>Heavy-duty trucks &amp; trailers</li>
-   <li>Medium &amp; light-duty trucks</li>
-   <li>Autos</li>
-   <li>Farm equipment</li>
-   <li>RVs</li>
-   <li><em>Metal fabrication</em></li>
-  </ul>
-  <p class="mono">Preferred installer for etrailer. Services as listed on the shop&rsquo;s Facebook page and Google listing.</p>
+  <div class="side">
+   <h2 id="svc-h" class="big">What the shop works on</h2>
+   <p class="mono">Services as listed on the shop&rsquo;s Facebook page and Google listing.</p>
+   <picture class="ph"><source type="image/webp" srcset="img/a.webp"><img src="img/a.jpg" width="900" height="675" alt="Sparks flying as someone in a welding helmet grinds a steel beam" loading="lazy" decoding="async"></picture>
+  </div>
+  <dl>
+   <div><dt>Heavy-duty trucks &amp; trailers</dt><dd>Repair work on big trucks and the trailers behind them.</dd></div>
+   <div><dt>Medium &amp; light-duty trucks</dt><dd>Work trucks, pickups and everything in between.</dd></div>
+   <div><dt>Autos</dt><dd>Everyday cars and SUVs.</dd></div>
+   <div><dt>Farm equipment</dt><dd>Tractors and other machinery used on farms and ranches.</dd></div>
+   <div><dt>RVs</dt><dd>Motorhomes and travel trailers.</dd></div>
+   <div><dt><em>Metal fabrication</em></dt><dd>Custom metal work and fabrication.</dd></div>
+   <div><dt>etrailer installs</dt><dd>The shop is a preferred installer for etrailer.</dd></div>
+  </dl>
  </div>
 </section>
 
 <section class="how" aria-labelledby="how-h">
  <div class="w">
-  <h2 id="how-h" class="big">What customers say</h2>
-  <ol>
-   <li>Honest and straightforward</li>
-   <li>Knowledgeable and thorough</li>
-   <li>Fair, reasonable labor</li>
-   <li>Easy to work with</li>
-  </ol>
+  <div>
+   <h2 id="how-h" class="big">About the shop</h2>
+   <p class="abt">Outlaw Truck &amp; Trailer is a repair shop on County Road 21 in Elbert. It takes in heavy-duty trucks and trailers along with lighter trucks, autos, farm equipment and RVs, and it does metal fabrication too.</p>
+   <p class="abt">The shop holds a 4.8-star rating from 26 Google reviews.</p>
+  </div>
+  <div>
+   <h3>What customers say</h3>
+   <ol>
+    <li>Honest and straightforward</li>
+    <li>Knowledgeable and thorough</li>
+    <li>Fair, reasonable labor</li>
+    <li>Easy to work with</li>
+   </ol>
+  </div>
  </div>
 </section>
 
-<section class="out" aria-label="Call">
+<div class="pair" aria-hidden="false">
  <div class="w">
-  <p><b>Need a repair?</b>Call the shop to talk about your truck or trailer.</p>
-  <a class="btn" href="tel:+17193678976">(719) 367-8976</a>
+  <picture class="ph"><source type="image/webp" srcset="img/b.webp"><img src="img/b.jpg" width="900" height="600" alt="A green tractor parked in a grassy field under a big sky" loading="lazy" decoding="async"></picture>
+  <picture class="ph"><source type="image/webp" srcset="img/c.webp"><img src="img/c.jpg" width="900" height="675" alt="Grain silos on open farmland under storm clouds" loading="lazy" decoding="async"></picture>
  </div>
-</section>
+</div>
 
 <section class="find" aria-labelledby="find-h">
  <div class="w">
@@ -149,10 +194,23 @@ footer{border-top:1px solid var(--line);padding:22px 26px 30px;max-width:1100px;
    <h2 id="find-h" class="big">The shop</h2>
    <address>26700 Co Rd 21<br>Elbert, CO 80106</address>
    <p><a href="tel:+17193678976">(719) 367-8976</a></p>
-   <p>Open Monday to Friday, 7 AM &ndash; 5 PM</p>
-   <p style="margin-top:18px"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=26700%20Co%20Rd%2021%2C%20Elbert%2C%20CO%2080106" target="_blank" rel="noopener">Directions</a></p>
+   <table class="hrs" aria-label="Hours from the Google listing" style="max-width:340px">
+    <tr><td>Monday &ndash; Friday</td><td>7 AM &ndash; 5 PM</td></tr>
+    <tr><td>Saturday &amp; Sunday</td><td>Closed</td></tr>
+   </table>
+   <p class="area">On County Road 21 in Elbert, in Elbert County, Colorado.</p>
   </div>
   <iframe title="Map of 26700 Co Rd 21, Elbert, CO" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Outlaw%20Truck%20%26%20Trailer%2C%2026700%20Co%20Rd%2021%2C%20Elbert%2C%20CO%2080106&amp;z=13&amp;output=embed"></iframe>
+ </div>
+</section>
+
+<section class="out" aria-label="Call or get directions">
+ <div class="w">
+  <p><b>Need a repair?</b>Call the shop to talk about your truck or trailer, or get directions to County Road 21.</p>
+  <div class="btns">
+   <a class="btn" href="tel:+17193678976">Call (719) 367-8976</a>
+   <a class="btn o2" href="https://www.google.com/maps/dir/?api=1&amp;destination=26700%20Co%20Rd%2021%2C%20Elbert%2C%20CO%2080106" target="_blank" rel="noopener">Directions</a>
+  </div>
  </div>
 </section>
 </main>
